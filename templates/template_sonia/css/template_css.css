@@ -1,0 +1,56 @@
+
+* { padding: 0; margin: 0; }
+
+body { font: 1em Georgia, serif; color: #333; background: url(../images/background.jpg) repeat; padding: 0; margin: 0; }
+
+
+
+img { border: 0; }
+table { width: 100%; border-collapse: collapse; border: 0; }
+td, th { padding: 0; vertical-align: top; text-align:left; border: 0; }
+
+p, form { margin-top: 0; margin: 0px; }
+
+a { color: #C80000; }
+a:hover { color: #333 !important; }
+a.inv { color: #c41528; }
+a.inv:hover { color: #333 !important; }
+
+.clear { clear: both; overflow: hidden; height: 0px; font-size: 0; }
+.lclear { clear: left; }
+.rclear { clear: right; }
+
+ul, ol, li { margin: 0; padding: 0; list-style: none; }
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+small { font-size: 80% !important; }
+big { font-size: 130% !important; }
+sup { margin-top: -1em; }
+.png { -background-image: none !important; -background-position: left top; }
+
+.link { }
+.link:hover, span.link.hover { }
+
+.limit { position: relative; max-width: 1400px; min-width: 1000px; width: expression((document.documentElement.clientWidth	|| document.body.clientWidth) < 1000 ? '1000px' : (document.documentElement.clientWidth || document.body.clientWidth) > 1400 ? '1400px' : '100%' ); }
+.min-width { position: relative; min-width: 1000px; width: expression((document.documentElement.clientWidth	|| document.body.clientWidth) < 1000 ? '1000px' : '100%' ); }
+.centered { margin: 0 auto; }
+
+/* general */
+
+#wrapper { margin: 0 auto; width: 1000px; }
+#header { width: 1000px; float: left; }
+#leftcolumn { margin: 20px 5px 5px 0px; height: 600px; float: left }
+#content { float: left;  margin: 0px 5px 5px 0px; padding: 10px; height: 350px; display: inline; }
+/* #rightcolumn {} */
+#footer { font-size: 70%; clear: both; color: #333; border-top: 1px dotted #999; margin: 0px 0px 10px 0px; padding: 15px; }
+
+/* Menu styles */
+
+.menu{ width: 30%; float: left; padding-top: 20px; position: relative; z-index: 2; }
+
+.menu ul li { margin-bottom: 0.6em; font-size: 80%; }
+.menu ul li a:hover { color: #C80000 !important; }
+.menu ul li.current, .menu ul li.current a { color: #C80000; font-weight: bold; text-decoration: none; }
+.menu ul li ul { margin: 0.3em 0 1.2em 0.8em; } 
+.menu ul li li { font-size: 80%; margin-bottom: 0.2em; font-weight: normal !important; }
+.menu ul li li a {color: #C80000 !important; font-weight: normal !important;}
