@@ -13,9 +13,9 @@ var $debug_lang = '0';
 /* Database Settings */
 var $dbtype = 'mysql';
 var $host = 'localhost';
-var $user = 'root';
-var $password = '';
-var $db = 'lifefm';
+var $user = 'hmelyoff';
+var $password = 'jncnjq';
+var $db = 'joomla-evershow-me';
 var $dbprefix = 'jos_';
 /* Server Settings */
 var $live_site = '';
@@ -58,8 +58,8 @@ var $sef_rewrite   = '0';
 var $sef_suffix    = '0';
 /* Feed Settings */
 var $feed_limit   = 10;
-var $log_path = '/Library/WebServer/Documents/lifefm-github/logs';
-var $tmp_path = '/Library/WebServer/Documents/lifefm-github/tmp';
+var $log_path = '/home/hmelyoff/data/www/joomla.evershow.me/logs';
+var $tmp_path = '/home/hmelyoff/data/www/joomla.evershow.me/tmp';
 /* Session Setting */
 var $lifetime = '15';
 var $session_handler = 'database';
