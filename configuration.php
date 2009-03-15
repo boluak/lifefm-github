@@ -14,7 +14,7 @@ var $debug_lang = '0';
 var $dbtype = 'mysql';
 var $host = 'localhost';
 var $user = 'root';
-var $password = '';
+var $password = 'qwerty';
 var $db = 'lifefm';
 var $dbprefix = 'jos_';
 /* Server Settings */
