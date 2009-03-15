@@ -13,7 +13,7 @@ var $debug_lang = '0';
 /* Database Settings */
 var $dbtype = 'mysql';
 var $host = 'localhost';
-var $user = 'root';
+var $user = 'root'; 
 var $password = '';
 var $db = 'lifefm';
 var $dbprefix = 'jos_';
