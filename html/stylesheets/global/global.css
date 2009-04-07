@@ -16,14 +16,13 @@
 
 /* Global definitions: Links (begin) */
  
-  a:link, a:visited { color: #0971B2; }
-  a:hover { text-decoration: none; }
+  a:link, a:visited { color: black; }
+  a:hover { color: #c41528; }
 
-  a.g-link-inv:link, a.g-link-inv:visited { color: black; }
-  a.g-link-inv:hover { text-decoration: none; }
+  a.g-link-inv:link, a.g-link-inv:visited { color: #c41528; }
+  a.g-link-inv:hover { color: black; }
   
   .g-pseudo-link { position: relative; top: -0.14em; cursor: pointer; white-space: nowrap; text-decoration: none; border-bottom: 1px dotted; }
-  .g-pseudo-link:hover { text-decoration: none; }
   .g-pseudo-link span { position: relative; top: 0.14em; font-weight: normal; }
  
 /* Global definitions: Links (end) */
@@ -33,7 +32,7 @@
   html, body { width: 100%; height: 100%; }
   body { font: 12px Georgia, serif; color: black; position: relative; background: url(background.png) repeat 0 0; }
   
-  .g-color { color: #0971B2; }
+  .g-color { color: #c41528; }
  
   /* Default styles for clear blocks */
   .g-clear { clear: both; }

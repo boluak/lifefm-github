@@ -7,7 +7,10 @@
 
 /* Main layout styles (end) */
 
-.m-header .search .search-bg i
+.m-header .search .search-bg i,
+.m-header .menu .menu-top,
+.m-header .menu .menu-bottom,
+.m-header .menu ul li i
 { background: url(interface.png) no-repeat 0 0; }
 
 /* Styles for header */
@@ -21,6 +24,18 @@
   .m-header .search .search-bg i.r { left: 50%; background-position: right 0; }
   .m-header .search .search-in { margin-left: 35px; padding-top: 5px; padding-left: 4em; position: relative; }
   .m-header .search .search-in label { position: absolute; left: 0; top: 9px; }
+  
+  .m-header .menu { padding-bottom: 28px; font-size: 13px; position: relative; }
+  .m-header .menu .menu-top,
+  .m-header .menu .menu-bottom { height: 28px; width: 11px; position: absolute; left: -1px; }
+  .m-header .menu .menu-bottom { background-position: left bottom; }
+  
+  .m-header .menu ul { padding-top: 28px; }
+  .m-header .menu ul li { padding-left: 50px; height: 22px; position: relative; }
+  .m-header .menu ul li.selected { }
+  .m-header .menu ul li i.line { width: 11px; height: 22px; left: -1px; top: 0; position: absolute; background-position: 0 -50px; }
+  .m-header .menu ul li i.l { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: -33px; top: 8px; }
+  .m-header .menu ul li i.r { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: 13px; top: 8px; }
   
 /* Styles for header (end) */
   
