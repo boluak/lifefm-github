@@ -6,3 +6,21 @@
   .m-layout .m-col-center { width: 72%; float: left; }
 
 /* Main layout styles (end) */
+
+.m-header .search .search-bg i
+{ background: url(interface.png) no-repeat 0 0; }
+
+/* Styles for header */
+
+  .m-header { padding-top: 15px; }
+  
+  .m-header .search { height: 34px; width: 95%; position: relative; left: -35px; margin-bottom: 20px; }
+  .m-header .search .search-bg { position: relative; }
+  .m-header .search .search-bg i { height: 34px; width: 50%; position: absolute; }
+  .m-header .search .search-bg i.l { left: 0; background-position: -12px 0; }
+  .m-header .search .search-bg i.r { left: 50%; background-position: right 0; }
+  .m-header .search .search-in { margin-left: 35px; padding-top: 5px; padding-left: 4em; position: relative; }
+  .m-header .search .search-in label { position: absolute; left: 0; top: 9px; }
+  
+/* Styles for header (end) */
+  

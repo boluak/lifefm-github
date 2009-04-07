@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>b-search test</title>
+
+    <link rel="stylesheet" href="../../stylesheets/global/global.reset.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../../stylesheets/global/global.link.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../../stylesheets/global/global.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="./stylesheets/b-search.css" type="text/css" media="screen">
+
+		<!--[if lt IE 8]>
+			<xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v" />
+      <link rel="stylesheet" href="../../stylesheets/global/g-png/g-png.ie.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./stylesheets/b-search.ie.css" type="text/css" media="screen">
+		<![endif]-->
+
+    <script src="../../javascripts/jquery/jquery.core-1.3.2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./javascripts/b-search.js" type="text/javascript" charset="utf-8"></script>
+    
+    <style type="text/css" media="screen">
+      body { background: white; }
+      .test-page { padding: 20px; }
+      h1,h2,h3,h4,h5, ul { margin-bottom: 0.5em; }
+      li { line-height: 130%; }
+      .comment { color: gray; font-size: 12px; }
+      pre { font-size: 14px; }
+    </style>
+
+	</head>
+<body>
+  
+  <div class="test-page">
+    <h1>Пример использования b-search</h1>
+    <h3>Подключать:</h3>
+    <ul>
+      <li><a href="../../stylesheets/global/g-png/g-png.ie.css">/stylesheets/global/g-png/g-png.ie.css</a></li>
+      <li><a href="./stylesheets/b-search.css">/plugins/b-search/stylesheets/b-search.css</a></li>
+      <li><a href="./stylesheets/b-search.ie.css">/plugins/b-search/stylesheets/b-search.ie.css</a></li>
+    </ul>
+    <ul>
+      <li><a href="../../javascripts/jquery/jquery.core-1.3.2.js">/javascripts/jquery/jquery.core-1.3.x.js</a></li>
+      <li><a href="./javascripts/b-search.js">/plugins/b-search/javascripts/b-search.js</a></li>
+    </ul>
+    <br/><br/>
+
+    <h3>Пример:</h3>
+    <div style="width: 200px">
+      <input type="search" prettysearch="yes" placeholder="Поиск" autocomplete="off" />
+    </div>
+    <br/><br/>
+  
+    <h3>Код:</h3>
+    <p>
+<pre>
+&lt;div style="width: 200px"&gt; <span class="comment">&larr; Определяем ширину в родительском блоке</span>
+  &lt;input type="search" <strong>prettysearch="yes"</strong> placeholder="Поиск" autocomplete="off" /&gt;
+&lt;/div&gt;
+</pre>
+    </p>
+    <br/><br/>
+  </div>
+</body>
+</html>
