@@ -48,7 +48,7 @@
   .g-centered { margin: 0 auto; }
  
   /* Pre-define headers */
-  h1, h2, h3, h4, h5 { font-weight: bold; text-transform: uppercase; position: relative; }
+  h1, h2, h3, h4, h5 { font-weight: normal; position: relative; }
   
 /* Global definitions (end) */
 
