@@ -1,0 +1,8 @@
+/* Main layout styles */
+
+  .m-layout { margin: 0 1% 0 5%; }
+  
+  .m-layout .m-col-left { width: 27%; float: left; }
+  .m-layout .m-col-center { width: 72%; float: left; }
+
+/* Main layout styles (end) */
