@@ -1,7 +1,7 @@
 /* Footer at the bottom edge of screen */
  
-  .l-page { height: 100%; }
-  .l-page .l-page { height: auto; }
-  .l-page-bottom { margin-top: 0; top: -150px; margin-bottom: -146px; }
+  .g-page { height: 100%; }
+  .g-page .g-page { height: auto; }
+  .g-page-bottom { margin-top: 0; top: -150px; margin-bottom: -146px; }
  
 /* Footer at the bottom edge of screen (end) */

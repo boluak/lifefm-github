@@ -54,8 +54,8 @@
 
 /* Footer at the bottom edge of screen */
  
-  .l-page { position: relative; min-height: 100%; }
-  .l-page .l-page { min-height: 0; padding-bottom: 170px; }
-  .l-page-bottom { z-index: 1; clear: both; position: relative; margin-top: -150px; height: 145px; }
+  .g-page { position: relative; min-height: 100%; }
+  .g-page .g-page { min-height: 0; padding-bottom: 170px; }
+  .g-page-bottom { z-index: 1; clear: both; position: relative; margin-top: -150px; height: 145px; }
  
 /* Footer at the bottom edge of screen (end) */
