@@ -11,24 +11,40 @@
 
 /* Main layout styles (end) */
 
-.m-header .search .search-bg i,
+.m-header .m-header-search .search-bg i,
 .m-header .menu .menu-top,
 .m-header .menu .menu-bottom,
 .m-header .menu ul li i,
-.m-header .menu ul li.selected i.slider
+.m-header .menu ul li.selected i.slider,
+.m-header .logo .cloud
 { background: url(interface.png) no-repeat 0 0; }
 
 /* Styles for header */
 
   .m-header { padding-top: 18px; }
   
-  .m-header .search { height: 34px; width: 95%; position: relative; left: -35px; margin-bottom: 20px; }
-  .m-header .search .search-bg { position: relative; }
-  .m-header .search .search-bg i { height: 34px; width: 50%; position: absolute; }
-  .m-header .search .search-bg i.l { left: 0; background-position: -12px 0; }
-  .m-header .search .search-bg i.r { left: 50%; background-position: right 0; }
-  .m-header .search .search-in { margin-left: 35px; padding-top: 5px; padding-left: 4em; position: relative; }
-  .m-header .search .search-in label { position: absolute; left: 0; top: 9px; }
+  .m-header .m-header-search { height: 34px; width: 95%; position: relative; left: -35px; margin-bottom: 20px; }
+  .m-header .m-header-search .search-bg { position: relative; }
+  .m-header .m-header-search .search-bg i { height: 34px; width: 50%; position: absolute; }
+  .m-header .m-header-search .search-bg i.l { left: 0; background-position: -12px 0; }
+  .m-header .m-header-search .search-bg i.r { left: 50%; background-position: right 0; }
+  .m-header .m-header-search .search-in { margin-left: 35px; padding-top: 5px; padding-left: 4em; position: relative; }
+  .m-header .m-header-search .search-in label { position: absolute; left: 0; top: 9px; }
+  
+  .m-header .logo { position: absolute; width: 377px; height: 168px; left: 50%; margin-left: -250px; top: 20px; }
+  .m-header .logo .cloud { position: absolute; width: 377px; height: 168px; left: 0; top: 0; background-position: -12px -35px; }
+  .m-header .logo .service { position: absolute; left: 14px; top: 84px; }
+  .m-header .logo .service li { float: left; width: 21px; height: 21px; margin-right: 12px; }
+  .m-header .logo .service li i { display: block; width: 12px; height: 11px; background: url(service-icons.gif) no-repeat 0 0; margin: 5px 0 0 5px; }
+  .m-header .logo .service li i.home { background-position: 0 0; }
+  .m-header .logo .service li i.search { background-position: -15px 0; }
+  .m-header .logo .service li i.contacts { background-position: -30px 0; margin-left: 4px; }
+  .m-header .logo .service li a i { background-color: black; }
+  .m-header .logo .service li a:hover i { background-color: #c41528; }
+  .m-header .logo .service li.selected { background: url(service-icons.gif) no-repeat -45px 0; }
+  .m-header .logo .service li.selected i.home { background-position: 0 -15px; }
+  .m-header .logo .service li.selected i.search { background-position: -15px -15px; }
+  .m-header .logo .service li.selected i.contacts { background-position: -30px -15px; }
   
   .m-header .menu { padding-bottom: 28px; font-size: 13px; position: relative; }
   .m-header .menu .menu-top,
@@ -48,9 +64,12 @@
   .m-header .top-menu li { margin-bottom: 3px; position: relative; }
   .m-header .top-menu li span { display: inline-block; margin-top: 1px; font-size: 10px; font-family: Arial, sans-serif; line-height: 10px; }
 
+  .m-header .top-menu li.popup a { position: relative; z-index: 1; }
   .m-header .top-menu li.popup a i,
   .m-header .top-menu li.music a i { left: -12px; top: 5px; position: absolute; width: 9px; height: 11px; background: url(top-menu-icons.gif) no-repeat 0 0; }
   .m-header .top-menu li.music a i { background-position: -10px 0; top: 4px; }
+  
+  .m-header .top-menu li.popup hr { border: 0; position: absolute; left: 0; top: 0.55em; width: 50%; border-top: 1px solid #cfcdc0; }
   
   .m-header #lifefmPlayer { position: absolute; right: 50%; top: -24px; margin-right: -70px; }
   
