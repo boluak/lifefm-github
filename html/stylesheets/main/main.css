@@ -52,11 +52,11 @@
   .m-header .menu .menu-bottom { background-position: left bottom; }
   
   .m-header .menu ul { padding-top: 28px; }
-  .m-header .menu ul li { padding-left: 50px; height: 19px; position: relative; padding-top: 3px; }
+  .m-header .menu ul li { padding-left: 50px; height: 18px; position: relative; padding-top: 2px; }
   .m-header .menu ul li.selected i.slider { position: absolute; width: 50px; height: 66px; left: -14px; top: -18px; background-position: -12px -204px; z-index: 2; }
-  .m-header .menu ul li i.line { width: 11px; height: 22px; left: -1px; top: 0; position: absolute; background-position: 0 -50px; }
-  .m-header .menu ul li i.l { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: -33px; top: 11px; }
-  .m-header .menu ul li i.r { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: 13px; top: 11px; }
+  .m-header .menu ul li i.line { width: 11px; height: 20px; left: -1px; top: 0; position: absolute; background-position: 0 -50px; }
+  .m-header .menu ul li i.l { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: -33px; top: 10px; }
+  .m-header .menu ul li i.r { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: 13px; top: 10px; }
   .m-header .menu ul li.line i.l { width: 55px; left: -58px; } 
   .m-header .menu ul li.line i.r { width: 55px; } 
   
