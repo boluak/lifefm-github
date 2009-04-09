@@ -5,9 +5,9 @@
   .m-layout .m-col-left { width: 27%; float: left; }
   .m-layout .m-col-center { width: 72%; float: left; }
   .m-layout .m-col-center .m-col-center-right,
-  .m-layout .m-col-center .m-col-center-right .m-col-2 { width: 60%; float: right; }
+  .m-layout .m-col-center .m-col-center-right .m-col-2 { width: 60%; float: right; position: relative; }
   .m-layout .m-col-center .m-col-center-left,
-  .m-layout .m-col-center .m-col-center-right .m-col-1 { width: 40%; float: left; }
+  .m-layout .m-col-center .m-col-center-right .m-col-1 { width: 40%; float: left; position: relative; }
 
 /* Main layout styles (end) */
 
@@ -20,7 +20,7 @@
 
 /* Styles for header */
 
-  .m-header { padding-top: 15px; }
+  .m-header { padding-top: 18px; }
   
   .m-header .search { height: 34px; width: 95%; position: relative; left: -35px; margin-bottom: 20px; }
   .m-header .search .search-bg { position: relative; }
@@ -51,6 +51,8 @@
   .m-header .top-menu li.popup a i,
   .m-header .top-menu li.music a i { left: -12px; top: 5px; position: absolute; width: 9px; height: 11px; background: url(top-menu-icons.gif) no-repeat 0 0; }
   .m-header .top-menu li.music a i { background-position: -10px 0; top: 4px; }
+  
+  .m-header #lifefmPlayer { position: absolute; right: 50%; top: -24px; margin-right: -70px; }
   
 /* Styles for header (end) */
   
