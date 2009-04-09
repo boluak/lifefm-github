@@ -4,6 +4,10 @@
   
   .m-layout .m-col-left { width: 27%; float: left; }
   .m-layout .m-col-center { width: 72%; float: left; }
+  .m-layout .m-col-center .m-col-center-right,
+  .m-layout .m-col-center .m-col-center-right .m-col-2 { width: 60%; float: right; }
+  .m-layout .m-col-center .m-col-center-left,
+  .m-layout .m-col-center .m-col-center-right .m-col-1 { width: 40%; float: left; }
 
 /* Main layout styles (end) */
 
@@ -39,6 +43,14 @@
   .m-header .menu ul li i.r { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: 13px; top: 11px; }
   .m-header .menu ul li.line i.l { width: 55px; left: -58px; } 
   .m-header .menu ul li.line i.r { width: 55px; } 
+  
+  .m-header .top-menu { padding-top: 9px; }
+  .m-header .top-menu li { margin-bottom: 3px; position: relative; }
+  .m-header .top-menu li span { display: inline-block; margin-top: 1px; font-size: 10px; font-family: Arial, sans-serif; line-height: 10px; }
+
+  .m-header .top-menu li.popup a i,
+  .m-header .top-menu li.music a i { left: -12px; top: 5px; position: absolute; width: 9px; height: 11px; background: url(top-menu-icons.gif) no-repeat 0 0; }
+  .m-header .top-menu li.music a i { background-position: -10px 0; top: 4px; }
   
 /* Styles for header (end) */
   
