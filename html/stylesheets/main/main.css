@@ -3,7 +3,7 @@
   .m-layout { margin: 0 1% 0 5%; }
   
   .m-layout .m-col-left { width: 27%; float: left; }
-  .m-layout .m-col-center { width: 72%; float: left; }
+  .m-layout .m-col-center { width: 72.5%; float: right; position: relative; }
   .m-layout .m-col-center .m-col-center-right,
   .m-layout .m-col-center .m-col-center-right .m-col-2 { width: 60%; float: right; position: relative; }
   .m-layout .m-col-center .m-col-center-left,
@@ -31,7 +31,7 @@
   .m-header .m-header-search .search-in { margin-left: 35px; padding-top: 5px; padding-left: 4em; position: relative; }
   .m-header .m-header-search .search-in label { position: absolute; left: 0; top: 9px; }
   
-  .m-header .logo { position: absolute; width: 377px; height: 168px; left: 50%; margin-left: -250px; top: 20px; }
+  .m-header .logo { position: absolute; width: 377px; height: 168px; left: 50%; margin-left: -250px; top: 20px; z-index: 2; }
   .m-header .logo .cloud { position: absolute; width: 377px; height: 168px; left: 0; top: 0; background-position: -12px -35px; }
   .m-header .logo .service { position: absolute; left: 14px; top: 84px; }
   .m-header .logo .service li { float: left; width: 21px; height: 21px; margin-right: 12px; }
@@ -46,7 +46,7 @@
   .m-header .logo .service li.selected i.search { background-position: -15px -15px; }
   .m-header .logo .service li.selected i.contacts { background-position: -30px -15px; }
   
-  .m-header .menu { padding-bottom: 28px; font-size: 13px; position: relative; }
+  .m-header .menu { padding-bottom: 28px; font-size: 13px; position: relative; margin-bottom: 30px; }
   .m-header .menu .menu-top,
   .m-header .menu .menu-bottom { height: 28px; width: 11px; position: absolute; left: -1px; }
   .m-header .menu .menu-bottom { background-position: left bottom; }
@@ -60,7 +60,8 @@
   .m-header .menu ul li.line i.l { width: 55px; left: -58px; } 
   .m-header .menu ul li.line i.r { width: 55px; } 
   
-  .m-header .top-menu { padding-top: 9px; }
+  .m-header .m-col-center-right { z-index: 1; }
+  .m-header .top-menu { padding-top: 9px; height: 119px; }
   .m-header .top-menu li { margin-bottom: 3px; position: relative; }
   .m-header .top-menu li span { display: inline-block; margin-top: 1px; font-size: 10px; font-family: Arial, sans-serif; line-height: 10px; }
 
@@ -69,9 +70,19 @@
   .m-header .top-menu li.music a i { left: -12px; top: 5px; position: absolute; width: 9px; height: 11px; background: url(top-menu-icons.gif) no-repeat 0 0; }
   .m-header .top-menu li.music a i { background-position: -10px 0; top: 4px; }
   
-  .m-header .top-menu li.popup hr { border: 0; position: absolute; left: 0; top: 0.55em; width: 50%; border-top: 1px solid #cfcdc0; }
+  .m-header .top-menu li.popup hr { border: 0; position: absolute; left: 0; top: 0.55em; width: 45%; border-top: 1px solid #cfcdc0; }
   
-  .m-header #lifefmPlayer { position: absolute; right: 50%; top: -24px; margin-right: -70px; }
+  .m-header #lifefmPlayer { position: absolute; right: 50%; top: -24px; margin-right: -65px; }
+  
+  .m-header .banner { top: 130px; width: 100%; margin-bottom: 25px; }
+  .m-header .banner .b-round { height: 130px; }
+  
+  .m-header .verse { margin-bottom: 20px; }
+  .m-header .verse .m-col-center-left { text-align: right; }
+  .m-header .verse .m-col-center-left h2 { font-size: 18px; color: #c41528; margin-right: 20px; position: relative; top: -0.1em; }
+  .m-header .verse .m-col-center-left h2 span { color: black; display: block; font-size: 12px; }
+  .m-header .verse .m-col-center-right { border-bottom: 1px solid #cdcbbd; padding-bottom: 10px; }
+  .m-header .verse .m-col-center-right p { width: 98%; font-size: 12px; }
   
 /* Styles for header (end) */
   

@@ -1,140 +1,143 @@
-.g-png {
-  position: relative;
-  overflow: hidden;
-  zoom: expression(
+/*
+ * PNG by using VML
+ * Author: Egor Hmelyoff (hmelyoff@gmail.com)
+ */
+
+  .g-png {
+    position: relative;
+    overflow: hidden;
+    zoom: expression(
     
-    this.PNGpropertychange = function(event, obj){
-      if(event.propertyName == 'className'){
-        var obj = obj ? obj : event.srcElement;
-        setTimeout(function() { obj.PNGevent(obj); }, 1); 
-      }
-    },
-    this.PNGbindevents = function(obj){
-      var parent = obj;
-      while(parent = parent.parentNode){
-        if(parent)
-          parent.attachEvent('onpropertychange', function(event){
-            obj.PNGpropertychange(event, obj);
-          })
-      }
-    },
+      this.PNGpropertychange = function(event, obj){
+        if(event.propertyName == 'className'){
+          var obj = obj ? obj : event.srcElement;
+          setTimeout(function() { obj.PNGevent(obj); }, 1); 
+        }
+      },
+      this.PNGbindevents = function(obj){
+        var parent = obj;
+        while(parent = parent.parentNode){
+          if(parent)
+            parent.attachEvent('onpropertychange', function(event){
+              obj.PNGpropertychange(event, obj);
+            })
+        }
+      },
 
-    this.attachEvent('onmouseenter', function(event){ /* Fix some events */
-      var obj = event.srcElement;
-      setTimeout(function() { obj.PNGevent(obj); }, 1);
-    }),
-    this.attachEvent('onmouseleave', function(event){
-      var obj = event.srcElement;
-      setTimeout(function() { obj.PNGevent(obj); }, 1);
-    }),
-    this.attachEvent('onpropertychange', this.PNGpropertychange),
+      this.attachEvent('onmouseenter', function(event){ /* Fix some events */
+        var obj = event.srcElement;
+        setTimeout(function() { obj.PNGevent(obj); }, 1);
+      }),
+      this.attachEvent('onmouseleave', function(event){
+        var obj = event.srcElement;
+        setTimeout(function() { obj.PNGevent(obj); }, 1);
+      }),
+      this.attachEvent('onpropertychange', this.PNGpropertychange),
     
-    this.PNGevent = function(obj){
-      var image = obj.getElementsByTagName("image")[0];
-      if(image){
-        image.style.position = "absolute";
-        image.style.display = "block";
-        image.style.zIndex = "-1";
-        image.style.fontSize = "0";
+      this.PNGevent = function(obj){
+        var $this = this;
+        var image = obj.getElementsByTagName("image")[0];
+        if(image){
+          image.style.position = "absolute";
+          image.style.display = "block";
+          image.style.zIndex = "-1";
+          image.style.fontSize = "0";
 
-        var imageX = obj.currentStyle.backgroundPositionX;
-        if(imageX != "right"){
-          image.style.left = imageX != 'left' ? imageX : 0;
-          image.style.right = "auto";
-        } else {
-          image.style.left = "auto";
-          image.style.right = 0;
-        }
+          var imageX = obj.currentStyle.backgroundPositionX;
+          if(imageX != "right"){
+            image.style.left = imageX != 'left' ? imageX : 0;
+            image.style.right = "auto";
+          } else {
+            image.style.left = "auto";
+            image.style.right = 0;
+          }
 
-        var imageY = obj.currentStyle.backgroundPositionY;
-        if(imageY != "bottom"){
-          image.style.top = imageY != "top" ? imageY : 0;
-          image.style.bottom = "auto";
-        } else {
-          image.style.top = "auto";
-          image.style.bottom = 0;
+          var imageY = obj.currentStyle.backgroundPositionY;
+          if(imageY != "bottom"){
+            image.style.top = imageY != "top" ? imageY : 0;
+            image.style.bottom = "auto";
+          } else {
+            image.style.top = "auto";
+            image.style.bottom = 0;
+          }
         }
-      }
-    },
-    this.PNGset = function(obj, cache){
-      obj.PNGvml.style.width = cache.width + "px";
-      obj.PNGvml.style.height = cache.height + "px";
-      obj.PNGinsert(obj)
-    },
-    this.PNGinsert = function(obj){
-      obj.insertBefore(obj.PNGvml, obj.firstChild);
-      obj.PNGevent(obj);
-    },
-    this.PNGload = function(obj){
-      if(!document.PNGwindow){
-        document.PNGwindow = true;
-        document.PNGready = [];
-        window.attachEvent("onload", function(){
-          document.PNGloaded = true;
-          for (var i=0; i < document.PNGready.length; i++) {
-           document.PNGready[i].call(document);
-          };
-        });
-      }
-      
-      if(!document.PNGcache){
-        try{ document.execCommand("BackgroundImageCache", false, true); } /* IE fix with background images cache */
-        catch(r){}
+      },
+      this.PNGset = function(obj, cache){
+        obj.PNGvml.style.width = cache.width + "px";
+        obj.PNGvml.style.height = cache.height + "px";
+        obj.PNGinsert(obj)
+      },
+      this.PNGinsert = function(obj){
+        obj.insertBefore(obj.PNGvml, obj.firstChild);
+        obj.PNGevent(obj);
+      },
+      this.PNGload = function(obj){
+
+        if(!document.PNGcache){
+          try{ document.execCommand("BackgroundImageCache", false, true); } /* IE fix with background images cache */
+          catch(r){}
         
-        document.PNGcache = new Array();
-      }
-    
-      for(var i=0;i<document.PNGcache.length;i++){
-        if(document.PNGcache[i].url == obj.PNGsrc){
-          if(document.PNGcache[i].loaded) obj.PNGset(obj, document.PNGcache[i]) /* fix when image in cache */
-          else document.PNGcache[i].obj.push(obj);
-          return;
+          document.PNGcache = new Array();
         }
-      }
-      document.PNGcache.push({ url: obj.PNGsrc, obj: [obj], loaded: false })
-      
-      if(document.PNGloaded)
-        obj.PNGpreload(obj);
-      else
-        document.PNGready.push(function(){
-          obj.PNGpreload(obj);
-          document.PNGloaded = true;
-        })
-
-    },
-    this.PNGpreload = function(obj){
-      var image = document.createElement("img");
-      document.body.appendChild(image);
-      image.onload = function() {
-        var aObjects;
+    
         for(var i=0;i<document.PNGcache.length;i++){
           if(document.PNGcache[i].url == obj.PNGsrc){
-            aObjects = document.PNGcache[i].obj;
-            break;
+            if(document.PNGcache[i].loaded) obj.PNGset(obj, document.PNGcache[i]) /* fix when image in cache */
+            else document.PNGcache[i].obj.push(obj);
+            return;
           }
         }
-        document.PNGcache[i].width = image.offsetWidth;
-        document.PNGcache[i].height = image.offsetHeight;
-        if(aObjects){
-          for(var k=0;k<aObjects.length;k++){
-            obj.PNGset(aObjects[k], document.PNGcache[i])
-          }
+        document.PNGcache.push({ url: obj.PNGsrc, obj: [obj], loaded: false })
+        
+        if(!document.onReady)
+          document.onReady = [];
+      
+        if(document.ieReady)
+          obj.PNGpreload(obj);
+        else
+          document.onReady.push(function(){
+            obj.PNGpreload(obj);
+          })
+
+      },
+      this.PNGpreload = function(obj){
+        var $this = this;
+        var image = document.createElement("img");
+        if(document.body){
+          document.body.appendChild(image);
+          image.onload = function() {
+            var aObjects;
+            for(var i=0;i<document.PNGcache.length;i++){
+              if(document.PNGcache[i].url == obj.PNGsrc){
+                aObjects = document.PNGcache[i].obj;
+                break;
+              }
+            }
+            document.PNGcache[i].width = image.offsetWidth;
+            document.PNGcache[i].height = image.offsetHeight;
+            if(aObjects){
+              for(var k=0;k<aObjects.length;k++){
+                obj.PNGset(aObjects[k], document.PNGcache[i])
+              }
+            }
+            document.PNGcache[i].loaded = true;
+            image.parentNode.removeChild(image);
+          };
+          image.src = obj.PNGsrc; /* IE fix with onload event (src must be declared under onload event) */
+          image.runtimeStyle.cssText = "behavior:none;position:absolute;left:-10000px;top:-10000px;border:none;";
         }
-        document.PNGcache[i].loaded = true;
-        image.parentNode.removeChild(image);
-      };
-      image.src = obj.PNGsrc; /* IE fix with onload event (src must be declared under onload event) */
-      image.runtimeStyle.cssText = "behavior:none;position:absolute;left:-10000px;top:-10000px;border:none;";
-    },
+      },
     
-    this.PNGvml = document.createElement("v:image"),
-    this.PNGsrc = currentStyle.backgroundImage.replace(/[^'"]*"?'?([^'"]*).*/, "$1"),
-    this.PNGvml.src = this.PNGsrc,
+      this.PNGvml = document.createElement("v:image"),
+      this.PNGsrc = currentStyle.backgroundImage.replace(/[^'"]*"?'?([^'"]*).*/, "$1"),
+      this.PNGvml.src = this.PNGsrc,
 
-    this.PNGload(this),
-    this.PNGbindevents(this),
+      this.PNGload(this),
+      this.PNGbindevents(this),
 
-    runtimeStyle.zoom="1", /* one-time called expression, at the same time declare hasLayout */
-    runtimeStyle.backgroundImage="none" /* remove background */
-  );
-}
+      runtimeStyle.zoom="1", /* one-time called expression, at the same time declare hasLayout */
+      runtimeStyle.backgroundImage="none" /* remove background */
+    );
+  }
+
+/* PNG by using VML (end) */
