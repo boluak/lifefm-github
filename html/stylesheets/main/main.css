@@ -123,14 +123,14 @@
   .m-header-bubble .b-round span { display: inline-block; padding-left: 6px; position: relative; top: -1px; }
   .m-header-bubble i.corner { width: 9px; height: 9px; background-position: -312px -204px; position: absolute; top: 17px; left: 10px; }
 
-  .m-header-bubble_rss { left: 10px; top: -3px; width: 38px; font-size: 12px; font-weight: bold; font-family: Arial, sans-serif; }
+  .m-header-bubble_rss { left: 10px; top: -4px; width: 38px; font-size: 12px; font-weight: bold; font-family: Arial, sans-serif; }
   .m-header-bubble_rss .b-round span { top: 2px; }
 
   .m-music-top { margin-top: 15px; width: 90%; }
   .m-music-top li { position: relative; height: 50px; }
-  .m-music-top li strong { position: absolute; font-size: 16px; width: 30px; left: -38px; top: 8px; text-align: right; font-weight: normal; }
+  .m-music-top li strong { position: absolute; font-size: 16px; width: 30px; left: -36px; top: 8px; text-align: right; font-weight: normal; }
   .m-music-top li.first strong { font-size: 20px; top: 4px; }
-  .m-music-top li .b-round { width: 44px; height: 34px; position: relative; left: -2px; float: left; }
+  .m-music-top li .b-round { width: 44px; height: 34px; position: relative; float: left; }
   .m-music-top li .b-round img { margin: 2px 0 0 2px; }
   .m-music-top li p { margin-left: 50px; font-size: 14px; }
   
@@ -143,7 +143,7 @@
   .m-news { margin-top: 15px; width: 90%; padding-bottom: 25px; }
   .m-news dt { font-size: 18px; margin-bottom: 2px; }
   .m-news dd { margin-bottom: 20px; }
-  .m-news dd p { margin-bottom: 1em; }
+  .m-news dd p { margin-bottom: 1em; line-height: 140%; }
   .m-news dd ul, .m-news dd ol { font-size: 12px; margin-left: 8px; } 
   .m-news dd ul li, .m-news dd ol li { margin-bottom: 0.2em; }
   .m-news dd big { font-size: 14px !important; }
@@ -153,3 +153,4 @@
   .m-recipe .b-round img { margin: 2px 0 0 2px; }
   .m-recipe .m-recipe-text { margin-left: 130px; padding-top: 4px; }
   .m-recipe .m-recipe-text h2 { margin-bottom: 4px; }
+  .m-recipe .m-recipe-text p { line-height: 140%; }
