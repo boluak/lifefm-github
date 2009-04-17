@@ -9,4 +9,13 @@
     IEBorderRadius: 10px;
   }  
 
+  .b-round_2-999999 {
+    background-color: #999999;
+    border-radius: 2px;
+  
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    IEBorderRadius: 2px;
+  }  
+
 /* Round sets (end) */

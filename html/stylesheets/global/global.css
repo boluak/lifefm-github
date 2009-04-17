@@ -48,13 +48,15 @@
  
   /* Pre-define headers */
   h1, h2, h3, h4, h5 { font-weight: normal; position: relative; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 18px; }
   
 /* Global definitions (end) */
 
 /* Footer at the bottom edge of screen */
  
   .g-page { position: relative; min-height: 100%; }
-  .g-page .g-page { min-height: 0; padding-bottom: 170px; }
-  .g-page-bottom { z-index: 1; clear: both; position: relative; margin-top: -150px; height: 145px; }
+  .g-page .g-page { min-height: 0; padding-bottom: 140px; }
+  .g-page-bottom { z-index: 1; clear: both; position: relative; margin-top: -100px; height: 95px; }
  
 /* Footer at the bottom edge of screen (end) */

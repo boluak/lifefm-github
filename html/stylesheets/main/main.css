@@ -11,13 +11,18 @@
 
 /* Main layout styles (end) */
 
-.m-header .m-header-search .search-bg i,
-.m-header .menu .menu-top,
-.m-header .menu .menu-bottom,
-.m-header .menu ul li i,
-.m-header .menu ul li.selected i.slider,
-.m-header .logo .cloud
-{ background: url(interface.png) no-repeat 0 0; }
+/* interface background */
+
+  .m-header .m-header-search .search-bg i,
+  .m-header .menu .menu-top,
+  .m-header .menu .menu-bottom,
+  .m-header .menu ul li i,
+  .m-header .menu ul li.selected i.slider,
+  .m-header .logo .cloud,
+  .m-pray-wall .m-pray-author i.corner  
+  { background: url(interface.png) no-repeat 0 0; }
+
+/* interface background (end) */
 
 /* Styles for header */
 
@@ -74,10 +79,10 @@
   
   .m-header #lifefmPlayer { position: absolute; right: 50%; top: -24px; margin-right: -65px; }
   
-  .m-header .banner { top: 130px; width: 100%; margin-bottom: 25px; }
+  .m-header .banner { top: 130px; margin-bottom: 25px; margin-left: -12px; }
   .m-header .banner .b-round { height: 130px; }
   
-  .m-header .verse { margin-bottom: 20px; }
+  .m-header .verse { margin-bottom: 30px; }
   .m-header .verse .m-col-center-left { text-align: right; }
   .m-header .verse .m-col-center-left h2 { font-size: 18px; color: #c41528; margin-right: 20px; position: relative; top: -0.1em; }
   .m-header .verse .m-col-center-left h2 span { color: black; display: block; font-size: 12px; }
@@ -85,4 +90,52 @@
   .m-header .verse .m-col-center-right p { width: 98%; font-size: 12px; }
   
 /* Styles for header (end) */
+
+/* Styles for footer */
+
+  .m-footer { border-top: 1px solid #cccccc; padding-top: 25px; }
+  .m-footer .copyright { text-indent: -1.2em; }
+
+/* Styles for footer (end) */
+
+
+
+/* List style with &mdash; */
+
+  ul.dash { margin-top: 0.4em; padding-left: 1.4em; }
+  ul.dash li { line-height: 140%; }
+  .dj_ie ul.dash li { behavior: expression( !this.before && this.parentNode && this.parentNode.nodeName == 'UL' ? this.before = this.innerHTML = '<span class="bullet">&mdash;&nbsp;</span>' + this.innerHTML : '' ); text-indent: expression( this.parentNode && this.parentNode.nodeName == 'UL' ? '-2.3em' : 0 ); }
+  ul.dash>li { text-indent:-1.3em; }
+  ul.dash>li:before { content:'\2014\a0'; }
+
+/* List style with &mdash; (end) */
+
+/* Content blocks */
+
+  .m-music-top { margin-top: 15px; width: 90%; }
+  .m-music-top li { position: relative; height: 50px; }
+  .m-music-top li strong { position: absolute; font-size: 16px; width: 30px; left: -38px; top: 8px; text-align: right; font-weight: normal; }
+  .m-music-top li.first strong { font-size: 20px; top: 4px; }
+  .m-music-top li .b-round { width: 44px; height: 34px; position: relative; left: -2px; float: left; }
+  .m-music-top li .b-round img { margin: 2px 0 0 2px; }
+  .m-music-top li p { margin-left: 50px; font-size: 14px; }
   
+  .m-pray-wall { width: 90%; margin-top: 10px; padding-bottom: 20px; }
+  .m-pray-wall .m-pray { margin-left: -12px; margin-bottom: 25px; }
+  .m-pray-wall .m-pray .m-pray-text { padding: 8px 12px; font-size: 14px; line-height: 130%; }
+  .m-pray-wall .m-pray-author { text-align: right; margin-right: 40px; position: relative; padding-top: 2px; }
+  .m-pray-wall .m-pray-author i.corner { width: 11px; height: 14px; position: absolute; right: -14px; top: 0; background-position: -35px -271px; }
+  
+  .m-news { margin-top: 15px; width: 90%; padding-bottom: 25px; }
+  .m-news dt { font-size: 18px; margin-bottom: 2px; }
+  .m-news dd { margin-bottom: 20px; }
+  .m-news dd p { margin-bottom: 1em; }
+  .m-news dd ul, .m-news dd ol { font-size: 12px; margin-left: 8px; } 
+  .m-news dd ul li, .m-news dd ol li { margin-bottom: 0.2em; }
+  .m-news dd big { font-size: 14px !important; }
+  
+  .m-recipe { margin-top: 15px; width: 80%; margin-bottom: 20px; }
+  .m-recipe .b-round { width: 119px; height: 94px; float: left; }
+  .m-recipe .b-round img { margin: 2px 0 0 2px; }
+  .m-recipe .m-recipe-text { margin-left: 130px; padding-top: 4px; }
+  .m-recipe .m-recipe-text h2 { margin-bottom: 4px; }
