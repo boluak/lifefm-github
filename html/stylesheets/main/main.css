@@ -19,7 +19,8 @@
   .m-header .menu ul li i,
   .m-header .menu ul li.selected i.slider,
   .m-header .logo .cloud,
-  .m-pray-wall .m-pray-author i.corner  
+  .m-pray-wall .m-pray-author i.corner,
+  .m-header-bubble i.corner  
   { background: url(interface.png) no-repeat 0 0; }
 
 /* interface background (end) */
@@ -98,8 +99,6 @@
 
 /* Styles for footer (end) */
 
-
-
 /* List style with &mdash; */
 
   ul.dash { margin-top: 0.4em; padding-left: 1.4em; }
@@ -110,7 +109,22 @@
 
 /* List style with &mdash; (end) */
 
+  .m-icon { position: relative; }
+  .m-icon-lock { display: inline-block; width: 9px; height: 11px; background: url(lock.gif) no-repeat 0 0; }
+  a:hover .m-icon-lock { background-position: -10px 0; }
+  
+
 /* Content blocks */
+
+  .m-header-bubble { display: inline-block; width: 42px; height: 17px; font-size: 14px; position: relative; top: -19px; left: -7px; }
+  .m-header-bubble a { color: white; text-decoration: none; }
+  .m-header-bubble a:hover span { text-decoration: underline; }
+  .m-header-bubble .b-round { height: 17px; }
+  .m-header-bubble .b-round span { display: inline-block; padding-left: 6px; position: relative; top: -1px; }
+  .m-header-bubble i.corner { width: 9px; height: 9px; background-position: -312px -204px; position: absolute; top: 17px; left: 10px; }
+
+  .m-header-bubble_rss { left: 10px; top: -3px; width: 38px; font-size: 12px; font-weight: bold; font-family: Arial, sans-serif; }
+  .m-header-bubble_rss .b-round span { top: 2px; }
 
   .m-music-top { margin-top: 15px; width: 90%; }
   .m-music-top li { position: relative; height: 50px; }
