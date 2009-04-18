@@ -12,10 +12,10 @@ var $debug = '0';
 var $debug_lang = '0';
 /* Database Settings */
 var $dbtype = 'mysql';
-var $host = 'localhost';
-var $user = 'hmelyoff';
-var $password = 'jncnjq';
-var $db = 'joomla-evershow-me';
+var $host = '78.24.218.67';
+var $user = 'remote';
+var $password = 'qwertyasdfgh';
+var $db = 'lifefm-github';
 var $dbprefix = 'jos_';
 /* Server Settings */
 var $live_site = '';
