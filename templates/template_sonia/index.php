@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>  
 <jdoc:include type="head" />  
-<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/template_sonia/css/template_css.css" type="text/css" />  
+<link rel="stylesheet" href="<?php echo $this->baseurl ?>/framework/stylesheets/application.css" type="text/css" /> 
 </head>
 
 <body>
