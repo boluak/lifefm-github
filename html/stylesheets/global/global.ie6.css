@@ -1,7 +1,0 @@
-/* Footer at the bottom edge of screen */
- 
-  .g-page { height: 100%; }
-  .g-page .g-page { height: auto; }
-  .g-page-bottom { margin-top: 0; top: -100px; margin-bottom: -96px; }
- 
-/* Footer at the bottom edge of screen (end) */
