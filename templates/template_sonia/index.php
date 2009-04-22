@@ -1,6 +1,6 @@
 <?php
 /**
- * @copyright	Copyright (C) 2005 - 2008 Open Source Matters. All rights reserved.
+ * @copyright	Copyright (C) 2005 - 2009 Open Source Matters. All rights reserved.
  * @license		GNU/GPL, see LICENSE.php
  * Joomla! is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
@@ -19,9 +19,22 @@ $showRightColumn &= JRequest::getCmd('task') != 'edit'
 <?php echo '<?xml version="1.0" encoding="utf-8"?'.'>'; ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
+
 <head>  
 <jdoc:include type="head" />  
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/framework/stylesheets/application.css" type="text/css" /> 
+<script src="javascripts/jquery/jquery.core-1.3.2.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/jquery/jquery.dependClass.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/global/GLOBAL.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/global/browsers.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/global/events.js" type="text/javascript" charset="utf-8"></script>
+<script src="javascripts/global/swfobject.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="javascripts/player.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="stylesheets/plugins/b-search/javascripts/b-search.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 
 <body>
