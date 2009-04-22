@@ -1,0 +1,156 @@
+/* Main layout styles */
+
+  .m-layout { margin: 0 1% 0 5%; }
+  
+  .m-layout .m-col-left { width: 27%; float: left; }
+  .m-layout .m-col-center { width: 72.5%; float: right; position: relative; }
+  .m-layout .m-col-center .m-col-center-right,
+  .m-layout .m-col-center .m-col-center-right .m-col-2 { width: 60%; float: right; position: relative; }
+  .m-layout .m-col-center .m-col-center-left,
+  .m-layout .m-col-center .m-col-center-right .m-col-1 { width: 40%; float: left; position: relative; }
+
+/* Main layout styles (end) */
+
+/* interface background */
+
+  .m-header .m-header-search .search-bg i,
+  .m-header .menu .menu-top,
+  .m-header .menu .menu-bottom,
+  .m-header .menu ul li i,
+  .m-header .menu ul li.selected i.slider,
+  .m-header .logo .cloud,
+  .m-pray-wall .m-pray-author i.corner,
+  .m-header-bubble i.corner  
+  { background: url(interface.png) no-repeat 0 0; }
+
+/* interface background (end) */
+
+/* Styles for header */
+
+  .m-header { padding-top: 18px; }
+  
+  .m-header .m-header-search { height: 34px; width: 95%; position: relative; left: -35px; margin-bottom: 20px; }
+  .m-header .m-header-search .search-bg { position: relative; }
+  .m-header .m-header-search .search-bg i { height: 34px; width: 50%; position: absolute; }
+  .m-header .m-header-search .search-bg i.l { left: 0; background-position: -12px 0; }
+  .m-header .m-header-search .search-bg i.r { left: 50%; background-position: right 0; }
+  .m-header .m-header-search .search-in { margin-left: 35px; padding-top: 5px; padding-left: 4em; position: relative; }
+  .m-header .m-header-search .search-in label { position: absolute; left: 0; top: 9px; }
+  
+  .m-header .logo { position: absolute; width: 377px; height: 168px; left: 50%; margin-left: -250px; top: 20px; z-index: 2; }
+  .m-header .logo .cloud { position: absolute; width: 377px; height: 168px; left: 0; top: 0; background-position: -12px -35px; }
+  .m-header .logo .service { position: absolute; left: 14px; top: 84px; }
+  .m-header .logo .service li { float: left; width: 21px; height: 21px; margin-right: 12px; }
+  .m-header .logo .service li i { display: block; width: 12px; height: 11px; background: url(service-icons.gif) no-repeat 0 0; margin: 5px 0 0 5px; }
+  .m-header .logo .service li i.home { background-position: 0 0; }
+  .m-header .logo .service li i.search { background-position: -15px 0; }
+  .m-header .logo .service li i.contacts { background-position: -30px 0; margin-left: 4px; }
+  .m-header .logo .service li a i { background-color: black; }
+  .m-header .logo .service li a:hover i { background-color: #c41528; }
+  .m-header .logo .service li.selected { background: url(service-icons.gif) no-repeat -45px 0; }
+  .m-header .logo .service li.selected i.home { background-position: 0 -15px; }
+  .m-header .logo .service li.selected i.search { background-position: -15px -15px; }
+  .m-header .logo .service li.selected i.contacts { background-position: -30px -15px; }
+  
+  .m-header .menu { padding-bottom: 28px; font-size: 13px; position: relative; margin-bottom: 30px; }
+  .m-header .menu .menu-top,
+  .m-header .menu .menu-bottom { height: 28px; width: 11px; position: absolute; left: -1px; }
+  .m-header .menu .menu-bottom { background-position: left bottom; }
+  
+  .m-header .menu ul { padding-top: 28px; }
+  .m-header .menu ul li { padding-left: 50px; height: 18px; position: relative; padding-top: 2px; }
+  .m-header .menu ul li.selected i.slider { position: absolute; width: 50px; height: 66px; left: -14px; top: -18px; background-position: -12px -204px; z-index: 2; }
+  .m-header .menu ul li i.line { width: 11px; height: 20px; left: -1px; top: 0; position: absolute; background-position: 0 -50px; }
+  .m-header .menu ul li i.l { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: -33px; top: 10px; }
+  .m-header .menu ul li i.r { width: 30px; border-top: 1px solid #b9b8ad; position: absolute; left: 13px; top: 10px; }
+  .m-header .menu ul li.line i.l { width: 55px; left: -58px; } 
+  .m-header .menu ul li.line i.r { width: 55px; } 
+  
+  .m-header .m-col-center-right { z-index: 1; }
+  .m-header .top-menu { padding-top: 9px; height: 119px; }
+  .m-header .top-menu li { margin-bottom: 3px; position: relative; }
+  .m-header .top-menu li span { display: inline-block; margin-top: 1px; font-size: 10px; font-family: Arial, sans-serif; line-height: 10px; }
+
+  .m-header .top-menu li.popup a { position: relative; z-index: 1; }
+  .m-header .top-menu li.popup a i,
+  .m-header .top-menu li.music a i { left: -12px; top: 5px; position: absolute; width: 9px; height: 11px; background: url(top-menu-icons.gif) no-repeat 0 0; }
+  .m-header .top-menu li.music a i { background-position: -10px 0; top: 4px; }
+  
+  .m-header .top-menu li.popup hr { border: 0; position: absolute; left: 0; top: 0.55em; width: 45%; border-top: 1px solid #cfcdc0; }
+  
+  .m-header #lifefmPlayer { position: absolute; right: 50%; top: -24px; margin-right: -65px; }
+  
+  .m-header .banner { top: 130px; margin-bottom: 25px; margin-left: -12px; }
+  .m-header .banner .b-round { height: 130px; }
+  
+  .m-header .verse { margin-bottom: 30px; }
+  .m-header .verse .m-col-center-left { text-align: right; }
+  .m-header .verse .m-col-center-left h2 { font-size: 18px; color: #c41528; margin-right: 20px; position: relative; top: -0.1em; }
+  .m-header .verse .m-col-center-left h2 span { color: black; display: block; font-size: 12px; }
+  .m-header .verse .m-col-center-right { border-bottom: 1px solid #cdcbbd; padding-bottom: 10px; }
+  .m-header .verse .m-col-center-right p { width: 98%; font-size: 12px; }
+  
+/* Styles for header (end) */
+
+/* Styles for footer */
+
+  .m-footer { border-top: 1px solid #cccccc; padding-top: 25px; }
+  .m-footer .copyright { text-indent: -1.2em; }
+
+/* Styles for footer (end) */
+
+/* List style with &mdash; */
+
+  ul.dash { margin-top: 0.4em; padding-left: 1.4em; }
+  ul.dash li { line-height: 140%; }
+  .dj_ie ul.dash li { behavior: expression( !this.before && this.parentNode && this.parentNode.nodeName == 'UL' ? this.before = this.innerHTML = '<span class="bullet">&mdash;&nbsp;</span>' + this.innerHTML : '' ); text-indent: expression( this.parentNode && this.parentNode.nodeName == 'UL' ? '-2.3em' : 0 ); }
+  ul.dash>li { text-indent:-1.3em; }
+  ul.dash>li:before { content:'\2014\a0'; }
+
+/* List style with &mdash; (end) */
+
+  .m-icon { position: relative; }
+  .m-icon-lock { display: inline-block; width: 9px; height: 11px; background: url(lock.gif) no-repeat 0 0; }
+  a:hover .m-icon-lock { background-position: -10px 0; }
+  
+
+/* Content blocks */
+
+  .m-header-bubble { display: inline-block; width: 42px; height: 17px; font-size: 14px; position: relative; top: -19px; left: -7px; }
+  .m-header-bubble a { color: white; text-decoration: none; }
+  .m-header-bubble a:hover span { text-decoration: underline; }
+  .m-header-bubble .b-round { height: 17px; }
+  .m-header-bubble .b-round span { display: inline-block; padding-left: 6px; position: relative; top: -1px; }
+  .m-header-bubble i.corner { width: 9px; height: 9px; background-position: -312px -204px; position: absolute; top: 17px; left: 10px; }
+
+  .m-header-bubble_rss { left: 10px; top: -4px; width: 38px; font-size: 12px; font-weight: bold; font-family: Arial, sans-serif; }
+  .m-header-bubble_rss .b-round span { top: 2px; }
+
+  .m-music-top { margin-top: 15px; width: 90%; }
+  .m-music-top li { position: relative; height: 50px; }
+  .m-music-top li strong { position: absolute; font-size: 16px; width: 30px; left: -36px; top: 8px; text-align: right; font-weight: normal; }
+  .m-music-top li.first strong { font-size: 20px; top: 4px; }
+  .m-music-top li .b-round { width: 44px; height: 34px; position: relative; float: left; }
+  .m-music-top li .b-round img { margin: 2px 0 0 2px; }
+  .m-music-top li p { margin-left: 50px; font-size: 14px; }
+  
+  .m-pray-wall { width: 90%; margin-top: 10px; padding-bottom: 20px; }
+  .m-pray-wall .m-pray { margin-left: -12px; margin-bottom: 25px; }
+  .m-pray-wall .m-pray .m-pray-text { padding: 8px 12px; font-size: 14px; line-height: 130%; }
+  .m-pray-wall .m-pray-author { text-align: right; margin-right: 40px; position: relative; padding-top: 2px; }
+  .m-pray-wall .m-pray-author i.corner { width: 11px; height: 14px; position: absolute; right: -14px; top: 0; background-position: -35px -271px; }
+  
+  .m-news { margin-top: 15px; width: 90%; padding-bottom: 25px; }
+  .m-news dt { font-size: 18px; margin-bottom: 2px; }
+  .m-news dd { margin-bottom: 20px; }
+  .m-news dd p { margin-bottom: 1em; line-height: 140%; }
+  .m-news dd ul, .m-news dd ol { font-size: 12px; margin-left: 8px; } 
+  .m-news dd ul li, .m-news dd ol li { margin-bottom: 0.2em; }
+  .m-news dd big { font-size: 14px !important; }
+  
+  .m-recipe { margin-top: 15px; width: 80%; margin-bottom: 20px; }
+  .m-recipe .b-round { width: 119px; height: 94px; float: left; }
+  .m-recipe .b-round img { margin: 2px 0 0 2px; }
+  .m-recipe .m-recipe-text { margin-left: 130px; padding-top: 4px; }
+  .m-recipe .m-recipe-text h2 { margin-bottom: 4px; }
+  .m-recipe .m-recipe-text p { line-height: 140%; }

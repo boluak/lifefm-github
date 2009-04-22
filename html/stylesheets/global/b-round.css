@@ -1,0 +1,32 @@
+/* Round sets */
+
+  .b-round_10-eeede3 {
+    background-color: #eeede3;
+    border-radius: 10px;
+  
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    IEBorderRadius: 10px;
+  }  
+
+  .b-round_8-c41528 {
+    background-color: #c41528;
+    border-radius: 8px;
+  
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    IEBorderRadius: 8px;
+  }  
+
+  .b-round_2-999999 {
+    background-color: #999999;
+    border-radius: 2px;
+  
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    IEBorderRadius: 2px;
+  }  
+  
+  
+
+/* Round sets (end) */

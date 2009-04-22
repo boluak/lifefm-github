@@ -1,0 +1,6 @@
+/* Pretty search replacer */
+
+  .b-search .b-search_input { top: 4px; }
+  .b-search .b-search_right { width: expression(parentNode.offsetWidth + "px"); }
+
+/* Pretty search replacer (end) */
