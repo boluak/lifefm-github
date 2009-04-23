@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN"  
+ "http://dev.joomla.org/xml/1.5/template-install.dtd">  
+<install version="1.5.9" type="template">  
+  <name>Home page template</name>  
+  <creationDate>24 April 2009</creationDate>  
+  <author>hmelyoff</author>  
+  <authorEmail>hmelyoff@gmail.com</authorEmail>  
+  <authorUrl>http://blog.evershow.me</authorUrl>  
+  <copyright>Life Fm, 2009</copyright>  
+  <license>GNU/GPL</license>  
+  <version>1.5.0</version>  
+  <description>Template for home page</description>  
+  <files>  
+    <filename>index.php</filename>
+    <filename>templateDetails.xml</filename>  
+    <filename>template.php</filename>  
+    <filename>title.php</filename>  
+    <filename>params.ini</filename>  
+  </files>         
+
+  <positions>
+    
+  </positions>  
+
+</install>

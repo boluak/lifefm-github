@@ -161,14 +161,18 @@
             <div class="banner">
               <div class="b-round b-round_10-eeede3">banner</div>
             </div>
+
             <?php insert("title.php", $this) ?>      
+
           </div>
 
           <div class="g-clear"><div></div></div>
         </div>
       </div>
       <div class="g-clear"><div></div></div>
+
       <?php insert("template.php", $this) ?>      
+
       <div class="g-clear"><div></div></div>
     </div>
   </div>
