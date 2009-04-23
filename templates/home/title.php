@@ -1,3 +1,6 @@
+<?php
+  defined('_JEXEC') or die('Restricted access');
+?>
 <div class="verse">
   <div class="m-col-center-left">
     <h2>Verse of The Day<span>(Romans 12:1)</span></h2>

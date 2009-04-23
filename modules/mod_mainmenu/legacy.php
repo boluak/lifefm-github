@@ -17,7 +17,7 @@ defined('_JEXEC') or die('Restricted access');
 /**
 * Utility function for writing a menu link
 */
-function mosGetMenuLink($mitem, $level = 0, & $params, $open = null)
+function mosGetMenuLink($mitem, $level = 0, & $params, $open = null, $active)
 {
 	global $Itemid;
 	$txt = '';
@@ -61,10 +61,14 @@ function mosGetMenuLink($mitem, $level = 0, & $params, $open = null)
 
 	// Active Menu highlighting
 	$current_itemid = intval( $Itemid );
+	$isActive = false;
+	if($current_itemid == $mitem->id){
+	  $isActive = true;
+	}
 	if (!$current_itemid) {
 		$id = '';
 	} else {
-		if ($current_itemid == $mitem->id) {
+		if ($isActive) {
 			$id = 'id="active_menu' . $params->get('class_sfx') . '"';
 		} else {
 			if ($params->get('activate_parent') && isset ($open) && in_array($mitem->id, $open)) {
@@ -138,7 +142,11 @@ function mosGetMenuLink($mitem, $level = 0, & $params, $open = null)
 
 		default : // formerly case 2
 			// open in parent window
-			$txt = '<a href="' . $mitem->url . '" class="' . $menuclass . '" ' . $id . '>' . $mitem->name . '</a>';
+			if($isActive){
+  			$txt = '<strong class="' . $menuclass . '">' . $mitem->name . '</strong>';
+			} else {
+  			$txt = '<a href="' . $mitem->url . '" class="' . $menuclass . '" ' . $id . '>' . $mitem->name . '</a>';
+			}
 			break;
 	}
 
@@ -402,6 +410,56 @@ function mosShowHFMenu(& $params, $style = 0)
 				break;
 		}
 	}
+}
+
+function mosShowLFMainMenu(& $params)
+{
+	global $Itemid;
+	$current_itemid = intval( $Itemid );
+  
+	$menu = & JSite::getMenu();
+	$user = & JFactory::getUser();
+
+	//get menu items
+	$rows = $menu->getItems('menutype', $params->get('menutype'));
+
+	$links = array ();
+	if(is_array($rows) && count($rows)) {
+		foreach ($rows as $row)
+		{
+			if ($row->access <= $user->get('aid', 0)) {
+			  $item = array();
+			  $params->set("class_sfx", " g-color");
+			  $item["item"] = mosGetMenuLink($row, 0, $params, null, true);
+			  if($current_itemid == $row->id){
+  			  $item["active"] = true;
+			  } else {
+  			  $item["active"] = false;
+			  }
+				$links[] = $item;
+        
+			}
+		}
+	}
+
+	$menuclass = 'mainlevel' . $params->get('class_sfx');
+	$lang =& JFactory::getLanguage();
+
+  $count = 0;
+	echo '<ul>';
+	foreach ($links as $link) {
+	  if($count == 3){
+	    echo '
+  	    <li class="line">
+          <i class="line"></i><i class="l"></i><i class="r"></i>
+        </li>
+      ';
+	  }
+		echo '<li'.($link["active"] ? ' class="selected"' : '' ).'><i class="slider"></i><i class="line"></i><i class="l"></i><i class="r"></i>' . $link["item"] . '</li>';
+	  $count++;
+	}
+	echo '</ul>';
+  
 }
 
 /**

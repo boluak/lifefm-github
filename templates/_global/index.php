@@ -1,4 +1,5 @@
 <?php
+  defined('_JEXEC') or die('Restricted access');
   include dirname(__FILE__).DIRECTORY_SEPARATOR.'helper.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -64,6 +65,8 @@
             
             <div class="menu">
               <div class="menu-top g-png"></div>
+              <jdoc:include type="modules" name="global_menu" />  
+<!--
               <ul>
                 <li class="selected">
                   <i class="slider"></i>
@@ -119,6 +122,7 @@
                   <a href="/">Links</a>
                 </li>
               </ul>
+-->
               <div class="menu-bottom g-png"></div>
             </div>
           </div>
@@ -171,7 +175,7 @@
       </div>
       <div class="g-clear"><div></div></div>
 
-      <?php insert("template.php", $this) ?>      
+      <?php insert("template.php", $this) ?>    
 
       <div class="g-clear"><div></div></div>
     </div>
