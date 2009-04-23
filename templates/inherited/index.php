@@ -1,0 +1,1 @@
+<?php include dirname(__FILE__).DIRECTORY_SEPARATOR.'../global/index.php'; ?>
