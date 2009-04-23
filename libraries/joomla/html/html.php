@@ -165,7 +165,7 @@ class JHTML
 	{
 		// Include mootools framework
 		if($mootools) {
-			JHTML::_('behavior.mootools');
+			//JHTML::_('behavior.mootools');
 		}
 
 		if(strpos($path, 'http') !== 0) {

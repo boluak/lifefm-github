@@ -34,33 +34,33 @@ class JHTMLBehavior
 	 */
 	function mootools($debug = null)
 	{
-		static $loaded;
-
-		// Only load once
-		if ($loaded) {
-			return;
-		}
-
-		// If no debugging value is set, use the configuration setting
-		if ($debug === null) {
-			$config = &JFactory::getConfig();
-			$debug = $config->getValue('config.debug');
-		}
-
-		// TODO NOTE: Here we are checking for Konqueror - If they fix thier issue with compressed, we will need to update this
-		$konkcheck = strpos (strtolower($_SERVER['HTTP_USER_AGENT']), "konqueror");
-
-		if ($debug || $konkcheck) {
-			JHTML::script('mootools-uncompressed.js', 'media/system/js/', false);
-		} else {
-			JHTML::script('mootools.js', 'media/system/js/', false);
-		}
-		$loaded = true;
-		return;
+    static $loaded;
+    
+    // Only load once
+    if ($loaded) {
+     return;
+    }
+    
+    // If no debugging value is set, use the configuration setting
+    if ($debug === null) {
+     $config = &JFactory::getConfig();
+     $debug = $config->getValue('config.debug');
+    }
+    
+    // TODO NOTE: Here we are checking for Konqueror - If they fix thier issue with compressed, we will need to update this
+    $konkcheck = strpos (strtolower($_SERVER['HTTP_USER_AGENT']), "konqueror");
+    
+    if ($debug || $konkcheck) {
+     JHTML::script('mootools-uncompressed.js', 'media/system/js/', false);
+    } else {
+     JHTML::script('mootools.js', 'media/system/js/', false);
+    }
+    $loaded = true;
+    return;
 	}
 
-		function caption() {
-		JHTML::script('caption.js');
+	function caption() {
+    JHTML::script('caption.js');
 	}
 
 	function formvalidation() {
