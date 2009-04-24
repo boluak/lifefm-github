@@ -19,7 +19,6 @@
 			<option value="vert_indent">Legacy - Vertical</option>
 			<option value="horiz_flat">Legacy - Horizontal</option>
 			<option value="list_flat">Legacy - Flat List</option>
-			<option value="lifefm_main">Legacy - LifeFM Main</option>
 		</param>
 		<param name="@spacer" type="spacer" default="" label="" description="" />
 		<param name="startLevel" type="text" default="0" size="5" label="Start Level" description="PARAMSTARTLEVEL" />

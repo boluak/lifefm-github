@@ -139,12 +139,6 @@ class modMainMenuHelper
 				mosShowHFMenu($params, 1);
 				break;
 
-			case 'lifefm_main' :
-				// Include the legacy library file
-				require_once(dirname(__FILE__).DS.'legacy.php');
-				mosShowLFMainMenu($params);
-				break;
-
 			case 'horiz_flat' :
 				// Include the legacy library file
 				require_once(dirname(__FILE__).DS.'legacy.php');

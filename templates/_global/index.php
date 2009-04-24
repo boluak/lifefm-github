@@ -65,7 +65,71 @@
             
             <div class="menu">
               <div class="menu-top g-png"></div>
+              <?php
+                // jimport( 'joomla.application.module.helper' );
+                // $module = JModuleHelper::getModule('mainmenu');
+                // 
+                // $pattern = "/^(menu_style)=(.*)$/mi";
+                // $replacement = "\$1=lifefm_main";
+                // $module->params = preg_replace($pattern, $replacement, $module->params);
+                // 
+                // echo JModuleHelper::renderModule( $module );
+
+
+                // echo "<pre>";
+                // print_r( $module->params );
+                // echo "</pre>";
+
+                //                 global $Itemid;
+                //                 $current_itemid = intval( $Itemid );
+                //                 
+                //                 $menu = & JSite::getMenu();
+                //                 $user = & JFactory::getUser();
+                // 
+                //                 $rows = $menu->getItems('menutype', "mainmenu");
+                // 
+                // if(is_array($rows) && count($rows)) {
+                //  foreach ($rows as $row) {
+                //    if ($row->access <= $user->get('aid', 0)) {
+                //      $item = array();
+                //      $item["url"] = $row->link;
+                //      $item["name"] = $row->name;
+                //      if($current_itemid == $row->id){
+                //                        $item["active"] = true;
+                //      } else {
+                //                        $item["active"] = false;
+                //      }
+                //      $links[] = $item;
+                //    }
+                //  }
+                // }
+                // 
+                //                 $count = 0;
+                // echo '<ul>';
+                // foreach ($links as $link) {
+                //   if($count == 3){
+                //     echo '
+                //                      <li class="line">
+                //                         <i class="line"></i><i class="l"></i><i class="r"></i>
+                //                       </li>
+                //                     ';
+                //   }
+                //  echo '<li'.($link["active"] ? ' class="selected"' : '' ).'><i class="slider"></i><i class="line"></i><i class="l"></i><i class="r"></i>';
+                //  if($link["active"]){
+                //    echo '<strong class="g-color">'. $link["name"] .'</strong>';
+                //  } else {
+                //    echo '<a href="' . $link["url"] . '">'. $link["name"] .'</a>';
+                //  }
+                //  echo '</li>';
+                //   $count++;
+                // }
+                // echo '</ul>';
+
+              	
+                
+              ?>
               <jdoc:include type="modules" name="global_menu" />  
+              
 <!--
               <ul>
                 <li class="selected">
