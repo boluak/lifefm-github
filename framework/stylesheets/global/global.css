@@ -44,6 +44,7 @@
   
   /* Default limits for layout */
 	.g-limit { min-width: 1000px; max-width: 1400px; }
+	.g-limit-min { min-width: 1000px; }
   .g-centered { margin: 0 auto; }
  
   /* Pre-define headers */

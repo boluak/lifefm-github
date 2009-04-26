@@ -15,6 +15,10 @@
 	        '100%'
 	    );
 	  }
+
+	.g-limit-min {
+	  width: expression((document.documentElement.clientWidth || document.body.clientWidth) < 1000 ? '1000px' : '100%');
+	}
  
 /* Global definitions (end) */
 

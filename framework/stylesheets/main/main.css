@@ -36,6 +36,7 @@
   .m-header .m-header-search .search-bg i.r { left: 50%; background-position: right 0; }
   .m-header .m-header-search .search-in { margin-left: 35px; padding-top: 5px; padding-left: 4em; position: relative; }
   .m-header .m-header-search .search-in label { position: absolute; left: 0; top: 9px; }
+  .m-header .m-header-search .search-in input { width: 90%; }
   
   .m-header .logo { position: absolute; width: 377px; height: 168px; left: 50%; margin-left: -250px; top: 20px; z-index: 2; }
   .m-header .logo .cloud { position: absolute; width: 377px; height: 168px; left: 0; top: 0; background-position: -12px -35px; }
@@ -79,6 +80,9 @@
   .m-header .top-menu li.popup hr { border: 0; position: absolute; left: 0; top: 0.55em; width: 45%; border-top: 1px solid #cfcdc0; }
   
   .m-header #lifefmPlayer { position: absolute; right: 50%; top: -24px; margin-right: -65px; }
+  .m-header #lifefmPlayer span { position: absolute; left: -75px; width: 136px; top: 33px; }
+  .m-header #lifefmPlayer strong { font-weight: normal; }
+  .m-header #lifefmPlayer.flash span { display: none; }
   
   .m-header .banner { top: 130px; margin-bottom: 25px; margin-left: -12px; }
   .m-header .banner .b-round { height: 130px; }

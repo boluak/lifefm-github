@@ -1,5 +1,8 @@
 <?php
   defined('_JEXEC') or die('Restricted access');
 ?>
-
-template guru :)
+<div class="m-layout">
+  <div class="m-col-left">
+    template guru :)
+  </div>
+</div>

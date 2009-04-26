@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Bible Gateway Verse of the Day</name>
+	<author>Rick G</author>
+	<creationDate>April 2008</creationDate>
+	<authorEmail>bass281@gmail.com</authorEmail>
+	<authorUrl>http://joomlacode.org/gf/project/com_bg_votd/</authorUrl>
+	<version>1.0.4</version>
+	<description>This module displays the Verse of the Day from BibleGateway.com</description>
+	<files>
+		<filename module="mod_bg_votd">mod_bg_votd.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>votd.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/default.js.php</filename>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="version" type="list" default="31" label="Bible Version" description="The Bible version to use.">
+		    <option value="33">Deutsch - Hoffnung für Alle</option>
+			<option value="10">Deutsch - Luther Bibel 1545</option>
+			<option value="45">English - Amplified Bible</option>
+			<option value="8">English - American Standard Version</option>
+			<option value="16">English - Darby Translation</option>
+			<option value="47">English - English Standard Version</option>
+			<option value="9">English - King James Version</option>
+			<option value="49">English - New American Standard Bible</option>
+			<option value="76">English - New International Reader's Version</option>
+			<option value="31">English - New International Version</option>
+			<option value="64">English - New International Version - UK</option>
+			<option value="72">English - Today's New International Version</option>
+			<option value="15">English - Young's Literal Translation</option>
+			<option value="41">Español - Castilian</option>
+			<option value="59">Español - La Biblia de las Américas</option>
+			<option value="42">Español - Nueva Versión Internacional</option>
+			<option value="6">Español - Reina-Valera Antigua</option>
+			<option value="32">Français - La Bible du Semeur</option>
+			<option value="2">Français - Louis Segond</option>			
+			<option value="30">Nederlands - Het Boek</option>	
+		</param>
+		<param name="method" type="list" default="js" label="Method of Connection" description="BibleGateway.com has several methods of connecting to thier site.  Choose the method to use.">
+			<option value="js">Javascript</option>
+			<option value="rss">RSS Feed</option>
+		</param>						
+	</params>
+</install>

@@ -4,8 +4,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>">
   <head>
+    <?php
+    
+      // Remove mootools framework
+      
+      $user =& JFactory::getUser();
+      if( $user->get('guest') == 1 )
+      {
+        $headerstuff = $this->getHeadData();
+        $scripts = $headerstuff['scripts'];
+        $headerstuff['scripts'] = array();
+        foreach( $scripts as $url=>$type )
+        {
+          if( strpos($url, 'js/mootools.js') === false && strpos($url, 'js/caption.js') === false ) {
+            $headerstuff['scripts'][$url] = $type;
+          }
+        }
+        $this->setHeadData($headerstuff);
+      }
+    ?>
     <jdoc:include type="head" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
     <!--
       Connect all styles here
@@ -99,9 +117,17 @@
                     <a href="/"><i></i>winamp</a>
                   </li>
                 </ul>
-                <div id="lifefmPlayer">
-                 	<strong>Sorry, this site has a flash based native radio and adobe flash 8+ is needed. </strong><br />
-              	  <a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">Download Flash here.</a>
+                <div id="lifefmPlayer" class="flash">
+                  <noscript>
+                    <style type="text/css" media="screen">
+                      .m-header #lifefmPlayer.flash span { display: block !important; }
+                    </style>
+                  </noscript>
+                  <span>
+                   	<strong>Sorry, this site has a flash based native radio and adobe flash 8+ is needed. </strong>
+                   	<br />
+                	  <a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">Download Flash here.</a>
+                	</span>
                 </div>
               </div>
             </div>
@@ -125,14 +151,16 @@
     </div>
   </div>
 
-  <div class="g-page-bottom g-limit g-centered">
+  <div class="g-page-bottom g-limit-min">
     <div class="m-footer">
-      <div class="m-layout">
-        <div class="m-col-left">
-          <p class="copyright">&copy; 2008 Life Fm. All rights reserved.<br/><a class="g-link-inv" href="/">Login for staff <i class="m-icon m-icon-lock"></i></a></p>
-        </div>
-        <div class="m-col-center">
-          <p><a class="g-pseudo-link" href="#"><span>Subscribe to Newsletter</span></a></p>
+      <div class="g-limit g-centered">
+        <div class="m-layout">
+          <div class="m-col-left">
+            <p class="copyright">&copy; 2008 Life Fm. All rights reserved.<br/><a class="g-link-inv" href="/">Login for staff <i class="m-icon m-icon-lock"></i></a></p>
+          </div>
+          <div class="m-col-center">
+            <p><a class="g-pseudo-link" href="#"><span>Subscribe to Newsletter</span></a></p>
+          </div>
         </div>
       </div>
     </div>

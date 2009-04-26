@@ -5,5 +5,6 @@ $(document).ready(function(){
   so.addParam("scale", "noscale");
   so.addParam("wmode", "transparent");
   so.write("lifefmPlayer");
+  $("#lifefmPlayer").removeClass("flash");
   
 })
