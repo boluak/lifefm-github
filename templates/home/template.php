@@ -5,4 +5,7 @@
   <div class="m-col-left">
     template guru :)
   </div>
+  <div class="m-col-center">
+    <jdoc:include type="component" />
+  </div>
 </div>
