@@ -1,6 +1,5 @@
 <?php
   defined('_JEXEC') or die('Restricted access');
-  include dirname(__FILE__).DIRECTORY_SEPARATOR.'helper.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>">
@@ -65,128 +64,9 @@
             
             <div class="menu">
               <div class="menu-top g-png"></div>
-              <?php
-                // jimport( 'joomla.application.module.helper' );
-                // $module = JModuleHelper::getModule('mainmenu');
-                // 
-                // $pattern = "/^(menu_style)=(.*)$/mi";
-                // $replacement = "\$1=lifefm_main";
-                // $module->params = preg_replace($pattern, $replacement, $module->params);
-                // 
-                // echo JModuleHelper::renderModule( $module );
 
+              <jdoc:include type="modules" name="global_menu" />
 
-                // echo "<pre>";
-                // print_r( $module->params );
-                // echo "</pre>";
-
-                //                 global $Itemid;
-                //                 $current_itemid = intval( $Itemid );
-                //                 
-                //                 $menu = & JSite::getMenu();
-                //                 $user = & JFactory::getUser();
-                // 
-                //                 $rows = $menu->getItems('menutype', "mainmenu");
-                // 
-                // if(is_array($rows) && count($rows)) {
-                //  foreach ($rows as $row) {
-                //    if ($row->access <= $user->get('aid', 0)) {
-                //      $item = array();
-                //      $item["url"] = $row->link;
-                //      $item["name"] = $row->name;
-                //      if($current_itemid == $row->id){
-                //                        $item["active"] = true;
-                //      } else {
-                //                        $item["active"] = false;
-                //      }
-                //      $links[] = $item;
-                //    }
-                //  }
-                // }
-                // 
-                //                 $count = 0;
-                // echo '<ul>';
-                // foreach ($links as $link) {
-                //   if($count == 3){
-                //     echo '
-                //                      <li class="line">
-                //                         <i class="line"></i><i class="l"></i><i class="r"></i>
-                //                       </li>
-                //                     ';
-                //   }
-                //  echo '<li'.($link["active"] ? ' class="selected"' : '' ).'><i class="slider"></i><i class="line"></i><i class="l"></i><i class="r"></i>';
-                //  if($link["active"]){
-                //    echo '<strong class="g-color">'. $link["name"] .'</strong>';
-                //  } else {
-                //    echo '<a href="' . $link["url"] . '">'. $link["name"] .'</a>';
-                //  }
-                //  echo '</li>';
-                //   $count++;
-                // }
-                // echo '</ul>';
-
-              	
-                
-              ?>
-              <jdoc:include type="modules" name="global_menu" />  
-              
-<!--
-              <ul>
-                <li class="selected">
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <b class="g-color">Home</b>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">News</a>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">Music</a>
-                </li>
-                <li class="line">
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">Programmes</a>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">Presenters</a>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">Community board</a>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">Blog</a>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">About us</a>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">Contact us</a>
-                </li>
-                <li>
-                  <i class="slider"></i>
-                  <i class="line"></i><i class="l"></i><i class="r"></i>
-                  <a href="/">Links</a>
-                </li>
-              </ul>
--->
               <div class="menu-bottom g-png"></div>
             </div>
           </div>
@@ -230,7 +110,7 @@
               <div class="b-round b-round_10-eeede3">banner</div>
             </div>
 
-            <?php insert("title.php", $this) ?>      
+            <jdoc:file name="title.php" />
 
           </div>
 
@@ -239,7 +119,7 @@
       </div>
       <div class="g-clear"><div></div></div>
 
-      <?php insert("template.php", $this) ?>    
+      <jdoc:file name="template.php" />
 
       <div class="g-clear"><div></div></div>
     </div>
