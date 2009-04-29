@@ -101,11 +101,14 @@
             </div>
             <div class="m-col-center-right">
               <div class="m-col-1">
+                <jdoc:include type="modules" name="header_menu" />
+<!--
                 <ul class="top-menu">
                   <li><a class="g-link-inv" href="/">Donate</a></li>
                   <li><a href="/">Volunteers needed</a></li>
                   <li><a href="/">Tell a friend</a></li>
                 </ul>
+-->
               </div>
               <div class="m-col-2">
                 <ul class="top-menu">

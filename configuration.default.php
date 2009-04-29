@@ -53,8 +53,8 @@ var $MetaKeys = 'joomla, Joomla';
 var $MetaTitle = '1';
 var $MetaAuthor = '1';
 /* SEO Settings */
-var $sef           = '0';
-var $sef_rewrite   = '0';
+var $sef           = '1';
+var $sef_rewrite   = '1';
 var $sef_suffix    = '0';
 /* Feed Settings */
 var $feed_limit   = 10;
