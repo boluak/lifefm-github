@@ -450,12 +450,16 @@ function mosShowMainMenu(& $params, $style = 0)
 	//get menu items
 	$rows = $menu->getItems('menutype', $params->get('menutype'));
 	$menuclass = $params->get('class_sfx');
+	
+  // echo("<pre>");
+  // print_r($rows);
+  // echo("</pre>");
 
 	$links = array ();
 	if(is_array($rows) && count($rows)) {
 		foreach ($rows as $row)
 		{
-			if ($row->access <= $user->get('aid', 0)) {
+			if ($row->access <= $user->get('aid', 0) && !$row->sublevel) {
 			  $item = array();
 			  $item["item"] = mosGetMenuLink($row, 0, $params, null, true);
 			  if($current_itemid == $row->id){
